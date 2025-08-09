@@ -9,6 +9,7 @@ Description:
 This module provides an implementation of an undirected graph using an adjacency list.
 """
 
+
 class Graph:
     """
     A class to represent an undirected graph using an adjacency list.
@@ -60,7 +61,10 @@ class Graph:
         bool
             True if the edge was added, False if one or both vertices do not exist.
         """
-        if vertex_one not in self.adjacency_list or vertex_two not in self.adjacency_list:
+        if (
+            vertex_one not in self.adjacency_list
+            or vertex_two not in self.adjacency_list
+        ):
             return False
         self.adjacency_list[vertex_one].add(vertex_two)
         self.adjacency_list[vertex_two].add(vertex_one)
@@ -82,7 +86,10 @@ class Graph:
         bool
             True if the edge was removed, False if one or both vertices do not exist.
         """
-        if vertex_one not in self.adjacency_list or vertex_two not in self.adjacency_list:
+        if (
+            vertex_one not in self.adjacency_list
+            or vertex_two not in self.adjacency_list
+        ):
             return False
         self.adjacency_list[vertex_one].discard(vertex_two)
         self.adjacency_list[vertex_two].discard(vertex_one)

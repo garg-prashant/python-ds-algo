@@ -7,8 +7,8 @@ Date: 2025-08-09
 Description:
 ------------
 This module provides an implementation of a Binary Search Tree (BST) in Python.
-It includes the Node class to represent each node in the tree and the 
-BinarySearchTree class to manage the tree operations such as insertion, 
+It includes the Node class to represent each node in the tree and the
+BinarySearchTree class to manage the tree operations such as insertion,
 searching, removal, and traversal.
 """
 
@@ -84,7 +84,7 @@ class BinarySearchTree:
         while True:
             if new_node.value == current_node.value:
                 return False
-            elif new_node.value > current_node.value:
+            if new_node.value > current_node.value:
                 if current_node.right is None:
                     current_node.right = new_node
                     return True
@@ -113,7 +113,7 @@ class BinarySearchTree:
         while temp is not None:
             if value == temp.value:
                 return True
-            elif value > temp.value:
+            if value > temp.value:
                 temp = temp.right
             else:
                 temp = temp.left
@@ -144,7 +144,7 @@ class BinarySearchTree:
             else:
                 if node.left is None:
                     return node.right
-                elif node.right is None:
+                if node.right is None:
                     return node.left
                 temp = self._find_min(node.right)
                 node.value = temp.value

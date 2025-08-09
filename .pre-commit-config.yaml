@@ -5,7 +5,7 @@
 repos:
   # Pyink - Google's Python formatter (fork of Black)
   - repo: https://github.com/google/pyink
-    rev: '24.3.0'  # Use the latest stable version
+    rev: '24.10.1'  # Use the latest stable version
     hooks:
       - id: pyink
         name: pyink
@@ -34,7 +34,7 @@ repos:
 
   # Basic file checks
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+    rev: v5.0.0
     hooks:
       - id: trailing-whitespace
         description: "Trim trailing whitespace"

@@ -1,5 +1,5 @@
 """
-Module: binary_search_tree
+Module: binary_search_tree - unbalanced.
 License: MIT
 Author: Prashant Garg
 Date: 2025-08-09
@@ -7,10 +7,11 @@ Date: 2025-08-09
 Description:
 ------------
 This module provides an implementation of a Binary Search Tree (BST) in Python.
-It includes the Node class to represent each node in the tree and the 
-BinarySearchTree class to manage the tree operations such as insertion, 
+It includes the Node class to represent each node in the tree and the
+BinarySearchTree class to manage the tree operations such as insertion,
 searching, removal, and traversal.
 """
+
 
 class Node:
     """
@@ -25,6 +26,7 @@ class Node:
     right : Node, optional
         A reference to the right child node.
     """
+
     def __init__(self, value: int):
         self.value = value
         self.left: Node = None
@@ -55,6 +57,7 @@ class BinarySearchTree:
     _print_tree(node: Node, prefix: str, is_left: bool)
         Recursively prints the tree structure.
     """
+
     def __init__(self):
         self.root: Node = None
 
@@ -81,7 +84,7 @@ class BinarySearchTree:
         while True:
             if new_node.value == current_node.value:
                 return False
-            elif new_node.value > current_node.value:
+            if new_node.value > current_node.value:
                 if current_node.right is None:
                     current_node.right = new_node
                     return True
@@ -91,7 +94,7 @@ class BinarySearchTree:
                     current_node.left = new_node
                     return True
                 current_node = current_node.left
-    
+
     def contains(self, value: int) -> bool:
         """
         Checks if a value exists in the binary search tree.
@@ -110,7 +113,7 @@ class BinarySearchTree:
         while temp is not None:
             if value == temp.value:
                 return True
-            elif value > temp.value:
+            if value > temp.value:
                 temp = temp.right
             else:
                 temp = temp.left
@@ -130,6 +133,7 @@ class BinarySearchTree:
         bool
             True if the value was removed, False if the value does not exist in the tree.
         """
+
         def _remove_node(node: Node, value: int) -> Node:
             if node is None:
                 return None
@@ -140,7 +144,7 @@ class BinarySearchTree:
             else:
                 if node.left is None:
                     return node.right
-                elif node.right is None:
+                if node.right is None:
                     return node.left
                 temp = self._find_min(node.right)
                 node.value = temp.value
@@ -180,10 +184,11 @@ def main():
     for value in [10, 23, 4, 56, 73, 33, 44, 38]:
         bst.insert(value)
 
-    print(bst.contains(33))
-    print(bst.contains(100))
-    bst.remove(33)
-    print(bst.contains(33))
+    print(f"contains 33: {bst.contains(33)}")
+    print(f"contains 100: {bst.contains(100)}")
+    print(f"remove 33: {bst.remove(33)}")
+    print(f"contains 33: {bst.contains(33)}")
+
 
 if __name__ == "__main__":
     main()

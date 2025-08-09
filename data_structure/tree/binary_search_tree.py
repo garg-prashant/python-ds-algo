@@ -184,10 +184,10 @@ def main():
     for value in [10, 23, 4, 56, 73, 33, 44, 38]:
         bst.insert(value)
 
-    print(bst.contains(33))
-    print(bst.contains(100))
-    bst.remove(33)
-    print(bst.contains(33))
+    print(f"contains 33: {bst.contains(33)}")
+    print(f"contains 100: {bst.contains(100)}")
+    print(f"remove 33: {bst.remove(33)}")
+    print(f"contains 33: {bst.contains(33)}")
 
 
 if __name__ == "__main__":

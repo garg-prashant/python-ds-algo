@@ -36,3 +36,4 @@ This project includes various data structures implemented in Python. You can exp
 This project also features several algorithms implemented in Python. You can explore the source code for each of them:
 
 - [Top K Elements](algorithms/tok_k_elements.py): Functions to find the k largest and k smallest elements in an array, and to search in a heap.
+- [Fibonacci](algorithms/fibonacci.py): Functions to calculate the nth Fibonacci number using simple recursion, recursion with memoization, top-down dynamic programming, and space efficient dynamic programming.

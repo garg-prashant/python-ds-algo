@@ -104,7 +104,7 @@ def fibonacci_top_down(n: int) -> int:
 
 def fibonacci_efficient_space(n: int) -> int:
     """
-    Calculate the nth Fibonacci number using a bottom-up dynamic programming approach.
+    Calculate the nth Fibonacci number using a space efficient dynamic programming approach.
 
     Parameters:
     ----------

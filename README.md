@@ -24,6 +24,15 @@ To set up this project, follow these steps:
    python setup_precommit.py
    ```
 
-## Running Programs
+## Data Structures
 
-To run different programs in this project, navigate to the respective directories and execute the Python scripts. For example, to run the Binary Search Tree implementation:
+This project includes various data structures implemented in Python. You can explore the source code for each of them:
+
+- [Binary Search Tree](data_structure/tree/binary_search_tree.py): An implementation of an unbalanced binary search tree with operations like insertion, searching, and removal.
+- [Simple Graph](data_structure/graphs/simple_graph.py): An implementation of an undirected graph using an adjacency list.
+
+## Algorithms
+
+This project also features several algorithms implemented in Python. You can explore the source code for each of them:
+
+- [Top K Elements](algorithms/tok_k_elements.py): Functions to find the k largest and k smallest elements in an array, and to search in a heap.

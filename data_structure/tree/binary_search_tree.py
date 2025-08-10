@@ -175,6 +175,42 @@ class BinarySearchTree:
             current = current.left
         return current
 
+    def pre_order_traversal(self, node: Node) -> list[int]:
+        """
+        Performs a pre-order traversal of the tree and returns the values of the nodes.
+        """
+        if node is None:
+            return []
+        return (
+            [node.value]
+            + self.pre_order_traversal(node.left)
+            + self.pre_order_traversal(node.right)
+        )
+
+    def in_order_traversal(self, node: Node) -> list[int]:
+        """
+        Performs an in-order traversal of the tree and returns the values of the nodes.
+        """
+        if node is None:
+            return []
+        return (
+            self.in_order_traversal(node.left)
+            + [node.value]
+            + self.in_order_traversal(node.right)
+        )
+
+    def post_order_traversal(self, node: Node) -> list[int]:
+        """
+        Performs a post-order traversal of the tree and returns the values of the nodes.
+        """
+        if node is None:
+            return []
+        return (
+            self.post_order_traversal(node.left)
+            + self.post_order_traversal(node.right)
+            + [node.value]
+        )
+
 
 def main():
     """
@@ -188,6 +224,10 @@ def main():
     print(f"contains 100: {bst.contains(100)}")
     print(f"remove 33: {bst.remove(33)}")
     print(f"contains 33: {bst.contains(33)}")
+
+    print(f"pre-order traversal: {bst.pre_order_traversal(bst.root)}")
+    print(f"in-order traversal: {bst.in_order_traversal(bst.root)}")
+    print(f"post-order traversal: {bst.post_order_traversal(bst.root)}")
 
 
 if __name__ == "__main__":

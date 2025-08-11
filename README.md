@@ -30,6 +30,7 @@ This project includes various data structures implemented in Python. You can exp
 
 - [Binary Search Tree](data_structure/tree/binary_search_tree.py): An implementation of an unbalanced binary search tree with operations like insertion, searching, and removal.
 - [Simple Graph](data_structure/graphs/simple_graph.py): An implementation of an undirected graph using an adjacency list.
+- [BFS and DFS](data_structure/graphs/bfs_dfs.py): An implementation of Breadth-First Search (BFS) and Depth-First Search (DFS) for traversing graphs.
 
 ## Algorithms
 
